@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            color: white;
+        }
+
+        .checked{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">會換顏色的箱子</div>
+    <script>
+        var box = document.querySelector('.box1')
+
+        box.onclick = function(       ){
+
+            box.classlist.add('checked')
+
+            box.classlist.remove('checked')
+        }
+
+
+
+
+    </script>
+</body>
+</html>

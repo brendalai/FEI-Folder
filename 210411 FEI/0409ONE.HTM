@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    #nav{
+        width: 100%;
+        height: 150px;
+        background-color:lightskyblue;
+    }
+
+    .container{
+        width: 80%;
+        height: 100%;
+        margin: auto;     
+    }
+
+    .container .title{
+        width: 200px;
+        height: 80px;
+        background-color: lightcoral;
+        position: relative;
+        top: calc( 50% - 40px);
+        border-radius: 10px;
+        text-align: center;
+        border-style: solid ; 
+        line-height: 80px;
+        font-size: 24px;
+        color: white;  
+    }
+
+    #top{
+        width: 100%;
+        height: 700px;
+        background-image: url(./MODERN.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #top:hover{
+        width: 100%;
+        height: 700px;
+        background-image: url(./FASHION.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        transition:3S ;
+        cursor: copy;
+    }
+
+    .banner{
+        width: 100%;
+        height: 100px;
+        background-color: lightskyblue;
+    }
+
+    .banner  .container{
+        width: 80%;
+        height: 80px;
+    }
+
+    .icon-group{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+    }
+
+    .icon{
+        width: 200px;
+        height: 50px;
+        background-color: lightsalmon;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    a{
+        color: white;
+    }
+
+    #main{
+        width: 100%;
+        background-color: lightsalmon;
+    }
+
+    .page1{
+        width: 100%;
+        height: 50vh;
+        background-image: url(./logo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+
+    .container .page1-title{
+        width: 400px;
+        height: 100px;
+        background-color: lightsalmon;
+        position: absolute;
+        left: calc(50% - 200px);
+        top: 20%;
+        text-align: center;
+        font-size: 36px;
+        line-height: 80px;
+        color:white;
+        border-style: double;
+        border-width: 10px;
+        border-color: red;
+    }
+
+    .container .page1-text{
+        width: 550px;
+        height: 200px;
+        background-color:lightsalmon;
+        color: black;
+        position: absolute;
+        top: 45%;
+        left: calc(50% - 275px);
+        font-size: 18px;
+        border-style: dotted;
+        border-color: red;     
+    }
+
+    .container .page2{
+        width: 100%;
+        height: 50vh;     
+        margin-bottom: 100px;
+    }
+    .container .page2-img{
+        width: calc(50% - 48px);
+        height: 50vh;
+        background-image: url(./CHANGE.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 50px 48px 0 0 ;
+        float: left;
+    }
+
+    .container .page2-word{
+        width: 50%;
+        height: 50vh;
+        float: right;
+        margin: 50px 0 0 0;
+    }
+
+    .container .page2-title{
+        width: 400px;
+        height: 100px;
+        background-color: lightsalmon;
+        text-align: center;
+        font-size: 36px;
+        line-height: 80px;
+        color:white;
+        border-style: double;
+        border-width: 10px;
+        border-color:black;
+        
+    }
+
+    .container .page2-text{
+        width: 600px;
+        height: 300px;
+        background-color:lightsalmon;
+        color: black;
+        font-size: 24px;
+        border-style: groove;
+        border-color:black;  
+    }
+
+    .page3{
+        width: 100%;
+        height:50vh ;
+    }
+
+    .page3-img{
+        width: 100%;
+        height: 100% ;
+        background-image: url(https://pic.17qq.com/uploads/fnffhkpnky.jpeg);  
+        background-size: 100% 100%;
+        position: relative;
+    }
+
+    .page3-img:hover{
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        opacity: 0.5;
+        transition: 2s;
+    }
+
+    .parallax{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .page3-title{
+        width: 400px;
+        height: 100px;
+        background-color: lightsalmon;
+        position: absolute;
+        top: calc(50% - 50px); 
+        left: calc(50% - 200px);
+        text-align: center;
+        font-size: 36px;
+        line-height: 80px;
+        color:white;
+        border-style: double;
+        border-width: 10px;
+        border-color:black;
+    }
+
+    .page4{
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .page4-left{
+        width: 50%;
+        height: 100%;
+        background-image: url(./時尚活動.jpeg);
+        background-position: center;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+    }
+
+    .page4-left:hover{
+        width: 50%;
+        height: 100%;
+        background-image: url(./時尚走秀.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        float: left;
+        opacity: o.5;
+        transition: 3s;
+    }
+
+    .pagel4-text{
+        width: 400px;
+        height: 100px;
+        background-color: lightsalmon;
+        text-align: center;
+        font-size: 36px;
+        line-height: 80px;
+        color:white;
+        border-style: double;
+        border-width: 10px;
+        border-color:black;
+    }
+
+    .page4-right{
+        width: 50%;
+        height: 100%;
+        background-image: url(./秀17活動海報.jpg);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: right;
+    }
+
+
+    .pager4-text{
+        width: 200px;
+        height: 100px;
+        background-color: salmon;
+        transform: (-50% , -50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 100px;
+        float: right;
+    }
+
+    .footer{
+        width: 100%;
+        height: 150px;
+        background-color:lightskyblue;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="title">時尚玩家</div>
+        </div>
+    </div>
+    <div id="top"></div>
+    <div class="banner">
+        <div class="container">
+            <div class="icon-group">
+                <div class="icon"><a href="">時尚品牌</a></div>
+                <div class="icon"><a href="">時尚潮流</a></div>
+                <div class="icon"><a href="">時尚人物</a></div>
+                <div class="icon"><a href="">時尚活動</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="page1">
+            <div class="container">
+                <div class="page1-title">時尚品牌大解析</div>
+                <div class="page1-text">
+                    <p>簡單地說，時尚就是「時間」與「崇尚」的相加。時尚就是短時間裡一些人所崇尚的生活。追求時尚不在於被動的追隨而在於理智而熟練的駕馭。</p>
+                    <p>它的觸角深入生活的方方面面，人們一直對它爭論不休。同時我們也意識到，人類對時尚的追求，促進了人類生活更加美好，無論是精神的或是物質的。</p>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="page2">
+                    <div class="page2-img"></div>
+                    <div class="page2-word">
+                        <div class="page2-title">時尚潮流的變遷</div>
+                        <div class="page2-text">  
+                            <p>
+                                「時尚」在1999年新版的《詞海》中已經有了內容豐富的解釋：「一種外表行為模式的流傳現象。如在服飾、語言、文藝、宗教等方面的新奇事物往往迅速被人們採用、模仿和推廣。表達人們對美的愛好和欣賞，或藉此發洩個人內心被壓抑的情緒。屬於人類行為的文化模式的範疇。時尚可看作習俗的變動形態，習俗可看作時尚的固定形態。」
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        <div class="page3">
+            <div class="page3-img parallax">
+                <div class="page3-title">時尚人物SHOW</div>
+            </div> 
+        </div>
+        <div class="page4">
+            <div class="page4-left">
+                <div class="pagel4-text">時尚活動大競技</div>
+            </div>
+            <div class="page4-right">
+                <div class="pager4-text">一起玩時尚</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+</body>
+</html>
